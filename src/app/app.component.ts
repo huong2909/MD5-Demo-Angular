@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test-angular';
+  arr = [['a', 's'], ['b', 'c']];
+  num = 0;
+  showMe: boolean;
 }
