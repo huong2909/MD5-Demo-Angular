@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgStyleClass} from "./NgStyleClass";
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,8 @@ export class AppComponent {
   arr = [['a', 's'], ['b', 'c']];
   num = 0;
   showMe: boolean;
+  colorInput: string;
+  dateValue = '2022-07-01';
+  textValue = 'Hello WORLD';
+  ngStyleClass = new NgStyleClass();
 }

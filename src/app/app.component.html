@@ -1,34 +1,35 @@
-<!--<div *ngFor="let item of arr; let i = index">-->
 
-<!--<div *ngFor="let temp of item">-->
+<!--su dung ngFor-->
+<div *ngFor="let item of arr; let i = index">
 
-<!--  <h2 >{{temp}}</h2>-->
-<!--</div>-->
-<!--  <br>-->
-<!--</div>-->
+<div *ngFor="let temp of item">
+
+  <h2 >{{temp}}</h2>
+</div>
+  <br>
+</div>
+
+<!--su dung ngSwitch-->
+<div class='card'>
+  <div class='card-header'>
+    ngSwitch Example
+  </div>
+  <div class="card-body">
+    Input string : <input type='text' [(ngModel)]="num" />
+
+    <div [ngSwitch]="num">
+      <div *ngSwitchCase="'1'">One</div>
+      <div *ngSwitchCase="'2'">Two</div>
+      <div *ngSwitchCase="'3'">Three</div>
+      <div *ngSwitchCase="'4'">Four</div>
+      <div *ngSwitchCase="'5'">Five</div>
+      <div *ngSwitchDefault>This is Default</div>
+    </div>
+  </div>
+</div>
 
 
-
-<!--<div class='card'>-->
-<!--  <div class='card-header'>-->
-<!--    ngSwitch Example-->
-<!--  </div>-->
-<!--  <div class="card-body">-->
-<!--    Input string : <input type='text' [(ngModel)]="num" />-->
-
-<!--    <div [ngSwitch]="num">-->
-<!--      <div *ngSwitchCase="'1'">One</div>-->
-<!--      <div *ngSwitchCase="'2'">Two</div>-->
-<!--      <div *ngSwitchCase="'3'">Three</div>-->
-<!--      <div *ngSwitchCase="'4'">Four</div>-->
-<!--      <div *ngSwitchCase="'5'">Five</div>-->
-<!--      <div *ngSwitchDefault>This is Default</div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-
+<!--su dung ngIf-->
 <h1>Simple example of ngIf </h1>
 <div class="row">
   Show <input type="checkbox" [(ngModel)]="showMe" />
@@ -43,6 +44,7 @@
 <hr>
 <h1>ngIf Else</h1>
 
+<!--su dung ngIf else-->
 <p *ngIf="showMe; else elseBlock1">
   ShowMe is checked
 </p>
@@ -50,8 +52,9 @@
 <ng-template #elseBlock1>
   <p>ShowMe is unchecked Using elseBlock</p>
 </ng-template>
-
 <hr>
+
+<!--su dung ngIf then else-->
 <h1>ngIf then else</h1>
 
 <p *ngIf="showMe; then thenBlock2 else elseBlock2">
@@ -65,4 +68,21 @@
 <ng-template #elseBlock2>
   <p>ShowMe is unchecked Using elseBlock</p>
 </ng-template>
+
+
+<!--su dung ngStyle-->
+<input type="text"[(ngModel)]="colorInput">
+<p [ngStyle]="{'color': colorInput}">Test ng-style</p>
+<!--su dung đối tượng ngStyle-->
+<p [ngStyle]="ngStyleClass">Test ng-style object</p>
+
+<!--su dung pipes-->
+<p>Without date pipes: {{dateValue}}</p>
+<p>With date pipes: {{dateValue | date}}</p>
+<p>Upper case: {{textValue | uppercase}}</p>
+<p>Lower case: {{textValue | lowercase}}</p>
+<p>Title case: {{textValue | titlecase}}</p>
+<p>Slice: {{textValue | slice: 0:7}}</p>
+
+
 
