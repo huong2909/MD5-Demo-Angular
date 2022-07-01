@@ -6,14 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color.component.scss']
 })
 export class ColorComponent implements OnInit {
-
+  green = 255;
+  red = 255;
+  blue = 255;
+  changeColor = '';
   constructor() { }
 
-  color() {
-    document.getElementById('color').style.background = 'red';
-    document.getElementById('color1').style.background = 'green';
-    document.getElementById('color2').style.background = 'blue';
-  }
+
   ngOnInit() {
   }
 
