@@ -1,0 +1,37 @@
+<p>Student</p>
+<div class="container">
+  <div class="col-5">
+    <form #createStudentForm = "ngForm"
+    (ngSubmit)="onSubmit(createStudentForm)">
+<!--      Tạo biến createStudentForm để nhận tất cả dữ liệu nhập trên form
+          hàm onSubmit để nhận dữ liệu-->
+      <div class="mb-3">
+        <label for="studentCode" class="form-label">Student code</label>
+        <input
+          [(ngModel)]="student.studentCode"
+          name="studentCode"
+          type="text" class="form-control" id="studentCode" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="studentName" class="form-label">Student Name</label>
+        <input
+          [(ngModel)]="student.studentName"
+          name="studentName"
+          type="text" class="form-control" id="studentName">
+      </div>
+      <div class="mb-3">
+        <label for="studentAddress" class="form-label">Student Address</label>
+        <input
+          [(ngModel)]="student.studentAddress"
+          name="studentAddress"
+          type="text" class="form-control" id="studentAddress">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
