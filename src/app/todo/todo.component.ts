@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Todo} from '../todo';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 // tslint:disable-next-line:variable-name
 let _id = 1;
@@ -8,7 +8,7 @@ let _id = 1;
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
