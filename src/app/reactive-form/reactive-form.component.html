@@ -11,7 +11,21 @@
 <!--    ||contactForm.controls.firstname?.touched)">-->
 <!--    <p style="color:red;">First Name is not valid</p>-->
 <!--  </div>-->
+<!--  Cách 2 -->
+<!--  <div *ngIf="!firstname.valid && (firstname.dirty ||firstname.touched)">-->
+<!--    <p style="color:red;">First Name is not valid</p>-->
+<!--  </div>-->
 
+<!--      Cách 3: thông báo lỗi cụ thể-->
+  <div
+    *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)">
+    <div [hidden]="!firstname.errors.required">
+      <p style="color:red;">First Name is required</p>
+    </div>
+    <div [hidden]="!firstname.errors.minlength">
+      <p style="color:red;">Min Length is 10</p>
+    </div>
+  </div>
 
 <p>
   <label for="lastname">Last Name </label>

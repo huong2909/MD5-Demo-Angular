@@ -28,6 +28,37 @@ export class ReactiveFormComponent implements OnInit {
   get firstname() {
     return this.contactForm.get('firstname');
   }
+  get lastname() {
+    return this.contactForm.get('lastname');
+  }
+
+  get email() {
+    return this.contactForm.get('email');
+  }
+
+  get gender() {
+    return this.contactForm.get('gender');
+  }
+
+  get isMarried() {
+    return this.contactForm.get('isMarried');
+  }
+
+  get country() {
+    return this.contactForm.get('country');
+  }
+
+  get city() {
+    return this.contactForm.get("address").get('city');
+  }
+
+  get street() {
+    return this.contactForm.get("address").get('street');
+  }
+
+  get pincode() {
+    return this.contactForm.get("address").get('pincode');
+  }
   constructor() { }
 
   ngOnInit() {
