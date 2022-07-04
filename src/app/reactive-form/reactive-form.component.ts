@@ -49,15 +49,15 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   get city() {
-    return this.contactForm.get("address").get('city');
+    return this.contactForm.get('address').get('city');
   }
 
   get street() {
-    return this.contactForm.get("address").get('street');
+    return this.contactForm.get('address').get('street');
   }
 
   get pincode() {
-    return this.contactForm.get("address").get('pincode');
+    return this.contactForm.get('address').get('pincode');
   }
   constructor() { }
 
