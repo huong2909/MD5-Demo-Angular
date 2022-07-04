@@ -25,6 +25,9 @@
     <div [hidden]="!firstname.errors.minlength">
       <p style="color:red;">Min Length is 10</p>
     </div>
+    <div [hidden]="!firstname.errors.pattern">
+      <p style="color:red;">Pattern is charater</p>
+    </div>
   </div>
 
 <p>

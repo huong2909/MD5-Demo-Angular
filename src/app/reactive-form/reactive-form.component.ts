@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
     {id: 3, name: 'Mỹ'},
   ];
   contactForm = new FormGroup({
-    firstname: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    firstname: new FormControl('', [Validators.required, Validators.minLength(10), Validators.pattern('^[a-zA-Z]+$')]),
     lastname: new FormControl('', [Validators.required, Validators.maxLength(15), Validators.pattern('^[a-zA-Z]+$')]),
     email: new FormControl('', [Validators.email, Validators.required]),
     gender: new FormControl('', [Validators.required]),
